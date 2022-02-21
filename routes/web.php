@@ -1,6 +1,9 @@
 <?php
 
+// use App\Models\Contact;
+use App\Http\Controllers\ContactController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Http\Request;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +16,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+Route::get('/', [ContactController::class, 'index']);
+
+Route::resource('contacts', ContactController::class);
+
+// in case we wanna a controller that will only expose a RESTful API
+// Route::apiResource('contacts', 'ContactController');
