@@ -1,0 +1,11 @@
+/public/hot
+/public/storage
+/public/uploads
+/public/images
+/public/img
+/public/mix-manifest.json
+/storage/*.key
+/vendor
+.env
+.env.backup
+package-lock.json
